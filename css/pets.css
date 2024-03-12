@@ -1,0 +1,148 @@
+body {
+    margin: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: beige;
+}
+
+h1 {
+    font-size: xx-large;
+    font-family: 'Sofia', Times, serif;
+    padding: 10px;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+h2 {
+    font-size: x-large;
+    text-decoration: underline;
+    color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 20px;
+}
+
+h3 {
+    font-size: medium;
+    text-decoration: solid;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+p {
+    font-size: medium;
+    width: 90%;
+    margin-bottom: 10px;
+    line-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    padding-top: 5px;
+    border: solid black 2px;
+}
+
+ul {
+    margin: 2%;
+    padding-top: 10px;
+}
+
+img {
+    border: dashed darkgreen 1px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+ol {
+    margin: 2%;
+    padding-top: 20px;
+    list-style-type: decimal;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: repeat(2, 1fr);
+    grid-gap: 2px;
+    align-items: stretch;
+}
+
+.grid-item1 {
+    grid-column: 1;
+    width: 1fr;
+  }
+
+.grid-item2  {
+    grid-column: 2;
+    width: 1fr;
+  }
+
+
+.grid-item3  {
+    grid-column: 3;
+    width: 1fr;
+  }
+
+.grid-item4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.grid-item5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+nav a.active {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+.skip:focus {
+    visibility: visible;
+}
+
+header {
+    color: beige;
+    background-color: darkgreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    text-align: center;
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row: repeat(1, 1fr);
+        grid-gap: 2px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .grid-item4  {
+        grid-column: 4;
+        grid-row: 1;
+      }
+
+}
